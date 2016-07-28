@@ -13,12 +13,12 @@ public class GreetingController {
 	private final AtomicLong counter = new AtomicLong();
 	
 	@RequestMapping(path = "/greeting", method = RequestMethod.GET)
-	public Greeting greeting(@RequestParam(name = "name", defaultValue = "World") String name) {
+	public Greeting greeting(@RequestParam(name = "name", defaultValue = "%username%") String name) {
 		return new Greeting(counter.incrementAndGet(), String.format(template, name));
 	}
 	
 	@RequestMapping(path = "/test", method = RequestMethod.GET)
 	public String about(@RequestParam(name = "id", defaultValue = "0") Long id) {
-		return String.format("Здесь должен быть id = %d. Ииии... его нет:   https://i.ytimg.com/vi/lcYpaYrYpus/maxresdefault.jpg", id);
+		return String.format("Вы отправили id = %d.", id);
 	}
 }
