@@ -1,4 +1,4 @@
-package hello;
+package my.apps.hello;
 
 public class Greeting {
 	private final long id;

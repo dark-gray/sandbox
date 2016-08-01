@@ -1,28 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sandbox</title>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-    <base href=""/>
+    <title>Sandbox</title>
+    <meta name="application-name" content="Testing area aka sendbox">
+    <meta name="robots" content="all"/>
+    <meta name="description" content="Тестовый полигон, на котором я обкатываю всякие веб-штуки по мере их изучения.">
+    <meta name="keywords" content="sandbox, web, HTML5, CSS, JavaScript, jQuery, bootstrap, angular, angularjs, ajax, testing, песочница, веб, вэб">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Aleksandr Morozov">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <base href="">
 
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="/webjars/jquery-ui/1.12.0/jquery-ui.min.css"/>-->
+    <!--<link rel="stylesheet" href="/webjars/jquery-ui/1.12.0/jquery-ui.structure.min.css"/>-->
+    <!--<link rel="stylesheet" href="/webjars/jquery-ui-themes/1.11.4/redmond/jquery-ui.min.css"/>-->
     <link rel="stylesheet" href="/css/main.css"/>
+
+    <script type="text/javascript" src="/webjars/angularjs/1.5.7/angular.min.js" ></script>
+    <script type="text/javascript" src="/webjars/angularjs/1.5.7/angular-resource.min.js" ></script>
+    <script type="text/javascript" src="/webjars/angularjs/1.5.7/angular-route.min.js" ></script>
+    <script type="text/javascript" src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="/webjars/jquery/3.0.0/jquery.min.js" ></script>
+    <!--<script type="text/javascript" src="/webjars/jquery-ui/1.12.0/jquery-ui.min.js"></script>-->
+    <script type="text/javascript" src="/webjars/jquery-placeholder/2.3.1/jquery.placeholder.min.js" ></script>
+    <script type="text/javascript" src="/webjars/lodash/4.0.0/lodash.min.js"></script>
+    <script type="text/javascript" src="/webjars/ng-file-upload/12.0.4/ng-file-upload-all.min.js"></script>
+    <script type="text/javascript" src="/js/datepicker-ru.js"></script>
+
 
 </head>
 <body>
-    <h1>Испытательный полигон нового функционала.</h1>
-    <p>Здесь должно быть подробное описание проекта.</p>
-    <p>И-и-и... его нет!</p>
+    <h3>Испытательный полигон нового функционала.</h3>
+    <!--<p>Здесь должно быть подробное описание проекта.</p>-->
+    <!--<p>И-и-и... его нет!</p>-->
+    <!--<br>-->
+    <!--<img src=https://i.ytimg.com/vi/lcYpaYrYpus/maxresdefault.jpg width="640" height="360">-->
     <br>
-    <img src=https://i.ytimg.com/vi/lcYpaYrYpus/maxresdefault.jpg width="640" height="360">
-    <br>
-    <br>
-    <div>
-        <p>Зато есть кое-что другое:</p>
-        <a methods="get" href="/test?id=1" title="Отправить тестовый запрос"><b>/test[?id=some_number]</b></a> - возвращает ответ на тестовый запрос
-        <br>
-        <a methods="get" href="/greeting?name=some_name" title="Запросить приветствие"><b>/greeting[?name=some_name]</b></a> - возвращает json-приветствие со счётчиком запросов <b>id</b>
-    </div>
+    <ul>
+        <li>
+            <a methods="get" href="/test?id=1" title="Отправить тестовый запрос"><b>/test[?id=some_number]</b></a> - возвращает ответ на тестовый запрос
+        </li>
+        <li>
+            <a methods="get" href="/greeting?name=some_name" title="Запросить приветствие"><b>/greeting[?name=some_name]</b></a> - возвращает json-приветствие со счётчиком запросов <b>id</b>
+        </li>
+    </ul>
 
 </body>
 </html>

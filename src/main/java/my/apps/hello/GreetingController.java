@@ -1,4 +1,4 @@
-package hello;
+package my.apps.hello;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,7 +16,7 @@ public class GreetingController {
 	public Greeting greeting(@RequestParam(name = "name", defaultValue = "%username%") String name) {
 		return new Greeting(counter.incrementAndGet(), String.format(template, name));
 	}
-	
+
 	@RequestMapping(path = "/test", method = RequestMethod.GET)
 	public String about(@RequestParam(name = "id", defaultValue = "0") Long id) {
 		return String.format("Вы отправили id = %d.", id);
