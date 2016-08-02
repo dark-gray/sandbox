@@ -17,6 +17,7 @@
     <!--<link rel="stylesheet" href="/webjars/jquery-ui-themes/1.11.4/redmond/jquery-ui.min.css"/>-->
     <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css"/>
+    <link rel="stylesheet" href="/css/dropdown-submenu.css"/>
 
     <script type="text/javascript" src="/webjars/angularjs/1.5.7/angular.min.js" ></script>
     <script type="text/javascript" src="/webjars/angularjs/1.5.7/angular-resource.min.js" ></script>
@@ -32,20 +33,55 @@
 
 </head>
 <body>
-    <h3>Испытательный полигон нового функционала.</h3>
-    <!--<p>Здесь должно быть подробное описание проекта.</p>-->
-    <!--<p>И-и-и... его нет!</p>-->
-    <!--<br>-->
-    <!--<img src=https://i.ytimg.com/vi/lcYpaYrYpus/maxresdefault.jpg width="640" height="360">-->
-    <br>
-    <ul>
-        <li>
-            <a methods="get" href="/test?id=1" title="Отправить тестовый запрос"><b>/test[?id=some_number]</b></a> - возвращает ответ на тестовый запрос
-        </li>
-        <li>
-            <a methods="get" href="/greeting?name=some_name" title="Запросить приветствие"><b>/greeting[?name=some_name]</b></a> - возвращает json-приветствие со счётчиком запросов <b>id</b>
+    <ul class="nav nav-tabs">
+        <li><a id="tab-home" href="#home" data-target="#manage-home" data-toggle="tab">Home</a></li>
+
+        <li class="dropdown" data-toggle="tab">
+            <a class="dropdown-toggle" id="tab-angularjs" href="#" data-toggle="dropdown">AngularJS
+                <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                    <a id="menu-tests" href="#">Test</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="disabled">N/A</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown-submenu">
+                    <a id="menu-apps" href="#">Application</a>
+                    <ul class="dropdown-menu">
+                        <li><a id="menu-todolist" href="#todolist" data-target="#manage-todolist">ToDo List</a></li>
+                        <li><a id="menu-javascript-projects" href="#javascript-projects" data-target="#manage-javascript-projects">JavaScript Projects</a></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li class="dropdown-submenu">
+                    <a id="menu-others" href="#">Others</a>
+                    <ul class="dropdown-menu">
+                        <li><a id="menu-something1" href="#something1" data-target="#manage-something1">Something 1</a></li>
+                        <li><a id="menu-something2" href="#something2" data-target="#manage-something2">Something 2</a></li>
+                    </ul>
+                </li>
+            </ul>
         </li>
     </ul>
+
+    <div class="tab-content">
+        <div id="manage-home" class="tab-pane fade in active">
+            <h3>Испытательный полигон нового функционала.</h3>
+            <br>
+            <ul>
+                <li>
+                    <a class="custom-ref" methods="get" href="/test?id=1" title="Отправить тестовый запрос"><b>/test[?id=some_number]</b></a> - возвращает ответ на тестовый запрос
+                </li>
+                <li>
+                    <a class="custom-ref" methods="get" href="/greeting?name=some_name" title="Запросить приветствие"><b>/greeting[?name=some_name]</b></a> - возвращает json-приветствие со счётчиком запросов <b>id</b>
+                </li>
+            </ul>
+        </div>
+        <div id="manage-angularj" class="tab-pane fade">
+
+        </div>
+    </div>
 
 </body>
 </html>

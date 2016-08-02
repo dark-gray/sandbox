@@ -1,8 +1,16 @@
-a {
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+    color: black;
+}
+
+a .custom-ref {
     text-decoration: none;      /* убираем подчеркивание */
 }
 
-a:hover {
+a .custom-ref:hover {
     text-decoration: underline; /* подчеркивание при наведении курсора*/
     color: blue;
 }
+
+.dropdown-menu a.disabled{pointer-events:none;cursor:default;color:darkgrey;}
