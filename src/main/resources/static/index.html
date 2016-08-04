@@ -7,6 +7,7 @@
     <meta name="robots" content="all"/>
     <meta name="description" content="Тестовый полигон, на котором я обкатываю всякие веб-штуки по мере их изучения.">
     <meta name="keywords" content="sandbox, web, HTML5, CSS, JavaScript, jQuery, bootstrap, angular, angularjs, ajax, testing, песочница, веб, вэб">
+    <!--Масштабирование страницы под размер экрана-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Aleksandr Morozov">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
@@ -16,8 +17,11 @@
     <!--<link rel="stylesheet" href="/webjars/jquery-ui/1.12.0/jquery-ui.structure.min.css"/>-->
     <!--<link rel="stylesheet" href="/webjars/jquery-ui-themes/1.11.4/redmond/jquery-ui.min.css"/>-->
     <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/main.css"/>
+    <link rel="stylesheet" href="/css/common.css"/>
+    <link rel="stylesheet" href="/css/custom.css"/>
     <link rel="stylesheet" href="/css/dropdown-submenu.css"/>
+    <link rel="stylesheet" href="/css/main.css"/>
+    <!--<link rel="stylesheet" href="/css/mobile.css"/>-->
 
     <script type="text/javascript" src="/webjars/angularjs/1.5.7/angular.min.js" ></script>
     <script type="text/javascript" src="/webjars/angularjs/1.5.7/angular-resource.min.js" ></script>
@@ -30,12 +34,20 @@
     <script type="text/javascript" src="/webjars/ng-file-upload/12.0.4/ng-file-upload-all.min.js"></script>
     <!--<script type="text/javascript" src="/js/datepicker-ru.js"></script>-->
 
-
 </head>
 <body>
     <ul class="nav nav-tabs">
-        <li><a id="tab-home" href="#home" data-target="#manage-home" data-toggle="tab">Home</a></li>
+        <li class="active"><a id="tab-home" href="#home" data-target="#manage-home" data-toggle="tab">Home</a></li>
+        <li><a id="tab-about" href="#about" data-target="#manage-about" data-toggle="tab">About</a></li>
+        <li><a id="tab-contact" href="#contact" data-target="#manage-contact" data-toggle="tab">Contact</a></li>
 
+        <li class="dropdown" data-toggle="tab">
+            <a class="dropdown-toggle" id="tab-html" href="#" data-toggle="dropdown">Html
+                <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="/html/tags" data-target="#manage-tags" data-toggle="tab">Tags</a></li>
+            </ul>
+        </li>
         <li class="dropdown" data-toggle="tab">
             <a class="dropdown-toggle" id="tab-angularjs" href="#" data-toggle="dropdown">AngularJS
                 <span class="caret"></span></a>
@@ -67,19 +79,39 @@
 
     <div class="tab-content">
         <div id="manage-home" class="tab-pane fade in active">
-            <h3>Испытательный полигон нового функционала.</h3>
-            <br>
-            <ul>
-                <li>
-                    <a class="custom-ref" methods="get" href="/test?id=1" title="Отправить тестовый запрос"><b>/test[?id=some_number]</b></a> - возвращает ответ на тестовый запрос
-                </li>
-                <li>
-                    <a class="custom-ref" methods="get" href="/greeting?name=some_name" title="Запросить приветствие"><b>/greeting[?name=some_name]</b></a> - возвращает json-приветствие со счётчиком запросов <b>id</b>
-                </li>
+            <div class="container-fluid well">
+                <h3>Испытательный полигон нового функционала.</h3>
+                <br>
+                <dl>
+                    <dt>
+                        <a class="custom-ref" methods="get" href="/test?id=1" title="Отправить тестовый запрос">/test[?id=some_number]</a>
+                    </dt>
+                    <dd>возвращает ответ на тестовый запрос</dd>
+                    <dt>
+                        <a class="custom-ref" methods="get" href="/greeting?name=some_name" title="Запросить приветствие">/greeting[?name=some_name]</a>
+                    </dt>
+                    <dd>возвращает json-приветствие со счётчиком запросов (значение параметра id)</dd>
+                </dl>
+            </div>
+        </div>
+        <div id="manage-tags" class="tab-pane fade">
+            <ul class="nav nav-pills nav-stacked col-md-1">
+                <li><a href="/html/tag/input" data-target="#tag-input" data-toggle="pill">input</a></li>
+                <li><a href="/html/tag/form" data-target="#tag-form" data-toggle="pill">form</a></li>
             </ul>
+            <div class="tab-content">
+                <div>Проба использования разных тегов.</div>
+                <div id="tag-input" class="tab-pane fade container well-lg">
+                    <label>
+                        Выбор цвета  <input type="color">
+                    </label>
+                </div>
+                <div id="tag-form" class="tab-pane fade container well-lg">
+                    <label>...</label>
+                </div>
+            </div>
         </div>
         <div id="manage-angularj" class="tab-pane fade">
-
         </div>
     </div>
 

@@ -1,0 +1,20 @@
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+    color: black;
+}
+
+a.custom-ref {
+    text-decoration: none;      /* убираем подчеркивание */
+}
+
+a.custom-ref:hover {
+    text-decoration: underline; /* подчеркивание при наведении курсора*/
+}
+
+.dropdown-menu a.disabled{pointer-events:none;cursor:default;color:darkgrey;}
+
+dd {
+    margin-left: 10px;
+    padding-bottom: 10px;
+}

@@ -1,0 +1,82 @@
+/*
+ * To prevent horizontal scrolling
+ */
+.section__content {
+    max-width: 1200px; /* вместо width: 1200px; */
+}
+
+
+/*
+ * Decrease header font size for small displays
+ */
+/*
+@media all and (max-width: 400px) {
+    .header__title {
+        font-size: 36px;
+    }
+}
+
+.header__title {
+    font-size: 72px;
+}
+*/
+
+
+/*
+ * Decrease font size for several elements at once
+ */
+html {
+    font-size: 10px;
+}
+
+.header__title {
+    font-size: 7.2rem; /* 72px */
+}
+
+.header__sub-title {
+    font-size: 4.2rem; /* 42px */
+}
+
+@media all and (max-width: 400px) {
+    html {
+        font-size: 5px;
+        /*
+           .header__title → 36px
+           .header__sub-title → 21px
+         */
+    }
+}
+
+
+/*
+ * Transform vertically oriented lists into horizontally oriented
+ */
+.list {
+    display: flex;            /* flex-контейнер */
+    flex-wrap: wrap;          /* многострочный режим */
+}
+
+.item {
+    flex-basis: 260px;        /* базовая ширина элемента */
+    flex-grow: 1;             /* элементы должны максимально растягиваться */
+    max-width: 360px;         /* последний элемент не должен расползаться на всю ширину страницы в горизонтальной ориентации */
+
+    display: flex;            /* каждый элемент, в свою очередь, тоже становится Flex-контейнером */
+    flex-direction: column;   /* для больших экранов сохраняем расположение иконки сверху */
+    align-items: flex-start;  /* выравниваем иконку по левому краю */
+}
+
+@media screen and (max-width: 400px) { /* для мобильных экранов */
+    .item {
+        flex-direction: row;           /* ставим иконку в один ряд с текстом */
+    }
+}
+
+/*
+ * Fit the pictures to the size of mobile screen
+ */
+.image {
+    height: 100vh;      /* устанавливаем высоту картинки, равную высоте экрана (vh — 1% от высоты viewport) */
+    max-width: 100%;    /* ограничиваем ширину картинки шириной экрана */
+    object-fit: cover;  /* масштабируем картинку с соблюдением пропорций */
+}

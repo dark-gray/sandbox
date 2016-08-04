@@ -1,0 +1,8 @@
+hr.grey-h2 {
+    background-color: darkgrey;
+    height: 2px;
+}
+
+.container, .container-fluid {
+    background-color: rgba(245, 245, 245, 0.3);
+}
