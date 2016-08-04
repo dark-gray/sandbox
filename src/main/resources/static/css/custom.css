@@ -3,6 +3,11 @@ hr.grey-h2 {
     height: 2px;
 }
 
-.container, .container-fluid {
+.container.light, .container-fluid.light {
+    padding: 19px;
     background-color: rgba(245, 245, 245, 0.3);
+}
+
+blockquote {
+    font-size: 14px;
 }
