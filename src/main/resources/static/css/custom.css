@@ -11,3 +11,7 @@ hr.grey-h2 {
 blockquote {
     font-size: 14px;
 }
+
+.container>.page-header, .container-fluid>.page-header {
+    margin-top: 0px;
+}

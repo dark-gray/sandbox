@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
     <meta charset="UTF-8">
-    <title>Sandbox</title>
+    <title>Testing area</title>
     <meta name="application-name" content="Testing area aka sendbox">
     <meta name="robots" content="all"/>
     <meta name="description" content="Тестовый полигон, на котором я обкатываю всякие веб-штуки по мере их изучения.">
@@ -12,6 +12,8 @@
     <meta name="author" content="Aleksandr Morozov">
     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
     <base href="">
+
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.ico"/>
 
     <!--<link rel="stylesheet" href="/webjars/jquery-ui/1.12.0/jquery-ui.min.css"/>-->
     <!--<link rel="stylesheet" href="/webjars/jquery-ui/1.12.0/jquery-ui.structure.min.css"/>-->
@@ -39,40 +41,31 @@
 </head>
 <body>
     <ul class="nav nav-tabs">
-        <li class="active"><a id="tab-home" href="#home" data-target="#manage-home" data-toggle="tab">Home</a></li>
-        <li><a id="tab-about" href="#about" data-target="#manage-about" data-toggle="tab">About</a></li>
-        <li><a id="tab-contact" href="#contact" data-target="#manage-contact" data-toggle="tab">Contact</a></li>
+        <li class="active"><a id="home-tab" href="/" data-target="#manage-home" data-toggle="tab">Home</a></li>
+        <li><a id="about-tab" href="/about/" data-target="#manage-about" data-toggle="tab">About</a></li>
+        <li><a id="contact-tab" href="/contact/" data-target="#manage-contact" data-toggle="tab">Contact</a></li>
 
         <li class="dropdown" data-toggle="tab">
-            <a class="dropdown-toggle" id="tab-html" href="#" data-toggle="dropdown">Html
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Html
                 <span class="caret"></span></a>
             <ul class="dropdown-menu">
-                <li><a href="/html/tags" data-target="#manage-tags" data-toggle="tab">Tags</a></li>
+                <li><a id="tags-tab" href="/tags/" data-target="#manage-tags" data-toggle="tab">Tags</a></li>
             </ul>
         </li>
         <li class="dropdown" data-toggle="tab">
-            <a class="dropdown-toggle" id="tab-angularjs" href="#" data-toggle="dropdown">AngularJS
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">AngularJS
                 <span class="caret"></span></a>
             <ul class="dropdown-menu">
-                <li class="dropdown-submenu">
-                    <a id="menu-tests" href="#">Test</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#" class="disabled">N/A</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown-submenu">
-                    <a id="menu-apps" href="#">Application</a>
-                    <ul class="dropdown-menu">
-                        <li><a id="menu-todolist" href="#todolist" data-target="#manage-todolist">ToDo List</a></li>
-                        <li><a id="menu-javascript-projects" href="#javascript-projects" data-target="#manage-javascript-projects">JavaScript Projects</a></li>
-                    </ul>
-                </li>
+                <li><a id="hello-tab" href="/hello/" data-target="#manage-hello" data-toggle="tab">Hello</a></li>
+                <li><a id="todolist-tab" href="/todolist/" data-target="#manage-todolist" data-toggle="tab">ToDo List</a></li>
+                <li><a id="js-projects-tab" href="/javascript-projects/" data-target="#manage-js-projects" data-toggle="tab">JavaScript Projects</a></li>
                 <li class="divider"></li>
+                <!--dropdown-submenu не заработал нормально с data-toggle. После первого нажатия пункт меню остаётся активным, и повторное нажатие ни к чему не приводит.-->
                 <li class="dropdown-submenu">
-                    <a id="menu-others" href="#">Others</a>
+                    <a href="#">Others</a>
                     <ul class="dropdown-menu">
-                        <li><a id="menu-something1" href="#something1" data-target="#manage-something1">Something 1</a></li>
-                        <li><a id="menu-something2" href="#something2" data-target="#manage-something2">Something 2</a></li>
+                        <li><a href="/something1/" data-target="#manage-something1" data-toggle="tab">Something 1</a></li>
+                        <li><a href="/something2/" data-target="#manage-something2" data-toggle="tab">Something 2</a></li>
                     </ul>
                 </li>
             </ul>
@@ -81,76 +74,25 @@
 
     <div class="tab-content">
         <div id="manage-home" class="tab-pane fade in active">
-            <div class="container-fluid light">
-                <div class="page-header">
-                    <h3>Testing area for a new functionality</h3>
-                </div>
-                <br>
-                <dl>
-                    <dt>
-                        <a class="custom-ref" methods="get" href="/test?id=1" title="Отправить тестовый запрос">/test[?id=some_number]</a>
-                    </dt>
-                    <dd>возвращает ответ на тестовый запрос</dd>
-                    <dt>
-                        <a class="custom-ref" methods="get" href="/greeting?name=some_name" title="Запросить приветствие">/greeting[?name=some_name]</a>
-                    </dt>
-                    <dd>возвращает json-приветствие со счётчиком запросов (значение параметра id)</dd>
-                </dl>
-            </div>
+            <ng-include src="'/html/home.html'"></ng-include>
         </div>
         <div id="manage-about" class="tab-pane fade">
-            <div class="container-fluid light">
-                <div class="page-header">
-                    <h3>Section under construction...</h3>
-                </div>
-                <blockquote>
-                    <p>I have always wished for my computer to be as easy to use as my telephone; my wish has come true because I can no longer figure out how to use my telephone.</p>
-                    <footer>Bjarne Stroustrup</footer>
-                </blockquote>
-                <blockquote class="blockquote-reverse">
-                    <p>Most of you are familiar with the virtues of a programmer. There are three, of course: laziness, impatience, and hubris.</p>
-                    <footer>Larry Wall</footer>
-                </blockquote>
-                <blockquote>
-                    <p>Programming is like sex. One mistake and you have to support it to the end of your life.</p>
-                    <footer>Michael Sinz</footer>
-                </blockquote>
-            </div>
+            <ng-include src="'/html/about.html'"></ng-include>
         </div>
         <div id="manage-contact" class="tab-pane fade">
-            <div class="container-fluid light">
-                <div class="page-header">
-                    <h3>Contact information</h3>
-                </div>
-                <p class="lead">
-                    If you have a question about... you know... SOMETHING, please feel free to ask me.
-                </p>
-                <p></p>I'm online most part of a day.</p>
-                <p>Skype: <code>armored-2011</code></p>
-            </div>
+            <ng-include src="'/html/contact.html'"></ng-include>
         </div>
         <div id="manage-tags" class="tab-pane fade">
-            <ul class="nav nav-pills nav-stacked col-md-1">
-                <li><a href="/html/tag/input" data-target="#tag-input" data-toggle="pill">input</a></li>
-                <li><a href="/html/tag/form" data-target="#tag-form" data-toggle="pill">form</a></li>
-            </ul>
-            <div class="tab-content">
-                <div class="container light">
-                    <h3 class="page-header">Learning of the tags behavior.</h3>
-                </div>
-                <div id="tag-input" class="tab-pane fade container well">
-                    <p class="lead">Attribute &lang;type&rang;</p>
-                    <dl>
-                        <dt>color</dt>
-                        <dd><input type="color"></dd>
-                    </dl>
-                </div>
-                <div id="tag-form" class="tab-pane fade container well">
-                    <label>...</label>
-                </div>
-            </div>
+            <ng-include src="'/html/tags.html'"></ng-include>
         </div>
-        <div id="manage-angularj" class="tab-pane fade">
+        <div id="manage-hello" class="tab-pane fade">
+            <ng-include src="'/html/hello.html'"></ng-include>
+        </div>
+        <div id="manage-todolist" class="tab-pane fade">
+            <ng-include src="'/html/todolist.html'"></ng-include>
+        </div>
+        <div id="manage-js-projects" class="tab-pane fade">
+            <ng-include src="'/html/js-projects.html'"></ng-include>
         </div>
     </div>
     <footer class="footer light">
