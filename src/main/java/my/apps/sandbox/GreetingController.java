@@ -1,4 +1,4 @@
-package my.apps.hello;
+package my.apps.sandbox;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

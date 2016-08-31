@@ -1,4 +1,4 @@
-package my.apps.hello.mock;
+package my.apps.sandbox.mock;
 
 import org.springframework.web.bind.annotation.RestController;
 

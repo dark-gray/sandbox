@@ -1,4 +1,4 @@
-package my.apps.hello;
+package my.apps.sandbox;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

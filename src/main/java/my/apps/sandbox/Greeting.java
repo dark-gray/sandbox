@@ -1,4 +1,4 @@
-package my.apps.hello;
+package my.apps.sandbox;
 
 public class Greeting {
 	private final long id;

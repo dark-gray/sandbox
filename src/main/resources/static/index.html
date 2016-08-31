@@ -40,21 +40,29 @@
 
 </head>
 <body>
+<header></header>
+<nav></nav>
+<article>
     <ul class="nav nav-tabs">
         <li class="active"><a id="home-tab" href="/" data-target="#manage-home" data-toggle="tab">Home</a></li>
         <li><a id="about-tab" href="/about/" data-target="#manage-about" data-toggle="tab">About</a></li>
         <li><a id="contact-tab" href="/contact/" data-target="#manage-contact" data-toggle="tab">Contact</a></li>
 
         <li class="dropdown" data-toggle="tab">
-            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Html
-                <span class="caret"></span></a>
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Mobile<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a id="mobile-apps-tab" href="/mobile/applications/" data-target="#manage-mobile-apps" data-toggle="tab">Applications</a></li>
+                <li><a id="mobile-games-tab" href="/mobile/games/" data-target="#manage-mobile-games" data-toggle="tab">Games</a></li>
+            </ul>
+        </li>
+        <li class="dropdown" data-toggle="tab">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Html<span class="caret"></span></a>
             <ul class="dropdown-menu">
                 <li><a id="tags-tab" href="/tags/" data-target="#manage-tags" data-toggle="tab">Tags</a></li>
             </ul>
         </li>
         <li class="dropdown" data-toggle="tab">
-            <a class="dropdown-toggle" href="#" data-toggle="dropdown">AngularJS
-                <span class="caret"></span></a>
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">AngularJS<span class="caret"></span></a>
             <ul class="dropdown-menu">
                 <li><a id="hello-tab" href="/hello/" data-target="#manage-hello" data-toggle="tab">Hello</a></li>
                 <li><a id="todolist-tab" href="/todolist/" data-target="#manage-todolist" data-toggle="tab">ToDo List</a></li>
@@ -71,7 +79,6 @@
             </ul>
         </li>
     </ul>
-
     <div class="tab-content">
         <div id="manage-home" class="tab-pane fade in active">
             <ng-include src="'/html/home.html'"></ng-include>
@@ -82,6 +89,15 @@
         <div id="manage-contact" class="tab-pane fade">
             <ng-include src="'/html/contact.html'"></ng-include>
         </div>
+
+        <div id="#manage-mobile-apps" class="tab-pane fade">
+            <ng-include src="'/html/mobile-apps.html'"></ng-include>
+        </div>
+        <div id="manage-mobile-games" class="tab-pane fade">
+            <ng-include src="'/html/mobile-games.html'"></ng-include>
+        </div>
+
+
         <div id="manage-tags" class="tab-pane fade">
             <ng-include src="'/html/tags.html'"></ng-include>
         </div>
@@ -95,10 +111,11 @@
             <ng-include src="'/html/js-projects.html'"></ng-include>
         </div>
     </div>
-    <footer class="footer light">
-        <div class="container">
-            <p class="text">&copy; 2016</p>
-        </div>
-    </footer>
+</article>
+<footer class="footer light">
+    <div class="container">
+        <p class="text">&copy; 2016</p>
+    </div>
+</footer>
 </body>
 </html>
