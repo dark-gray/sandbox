@@ -13,105 +13,105 @@
     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
     <base href="">
 
-    <link rel="shortcut icon" type="image/png" href="/img/favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.ico">
 
     <!--<link rel="stylesheet" href="/webjars/jquery-ui/1.12.0/jquery-ui.min.css"/>-->
     <!--<link rel="stylesheet" href="/webjars/jquery-ui/1.12.0/jquery-ui.structure.min.css"/>-->
     <!--<link rel="stylesheet" href="/webjars/jquery-ui-themes/1.11.4/redmond/jquery-ui.min.css"/>-->
     <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/common.css"/>
-    <link rel="stylesheet" href="/css/custom.css"/>
-    <link rel="stylesheet" href="/css/dropdown-submenu.css"/>
-    <link rel="stylesheet" href="/css/main.css"/>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/dropdown-submenu.css">
+    <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/mobile.css"/>
-    <link rel="stylesheet" href="/css/nav.css"/>
-    <link rel="stylesheet" href="/css/sticky-footer.css"/>
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/sticky-footer.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/fontello-embedded.css">
 
-    <script type="text/javascript" src="/webjars/angularjs/1.5.7/angular.min.js" ></script>
-    <script type="text/javascript" src="/webjars/angularjs/1.5.7/angular-resource.min.js" ></script>
-    <script type="text/javascript" src="/webjars/angularjs/1.5.7/angular-route.min.js" ></script>
+    <script type="text/javascript" src="/webjars/angularjs/1.5.7/angular.min.js"></script>
+    <script type="text/javascript" src="/webjars/angularjs/1.5.7/angular-resource.min.js"></script>
+    <script type="text/javascript" src="/webjars/angularjs/1.5.7/angular-route.min.js"></script>
     <script type="text/javascript" src="/webjars/jquery/3.0.0/jquery.min.js" ></script>
     <!--<script type="text/javascript" src="/webjars/jquery-ui/1.12.0/jquery-ui.min.js"></script>-->
-    <script type="text/javascript" src="/webjars/jquery-placeholder/2.3.1/jquery.placeholder.min.js" ></script>
-    <script type="text/javascript" src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="/webjars/jquery-placeholder/2.3.1/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/webjars/lodash/4.0.0/lodash.min.js"></script>
     <script type="text/javascript" src="/webjars/ng-file-upload/12.0.4/ng-file-upload-all.min.js"></script>
     <!--<script type="text/javascript" src="/js/datepicker-ru.js"></script>-->
 
 </head>
 <body>
-<header></header>
-<nav></nav>
-<article>
-    <ul class="nav nav-tabs">
-        <li class="active"><a id="home-tab" href="/" data-target="#manage-home" data-toggle="tab">Home</a></li>
-        <li><a id="about-tab" href="/about/" data-target="#manage-about" data-toggle="tab">About</a></li>
-        <li><a id="contact-tab" href="/contact/" data-target="#manage-contact" data-toggle="tab">Contact</a></li>
-
-        <li class="dropdown" data-toggle="tab">
-            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Mobile<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a id="mobile-apps-tab" href="/mobile/applications/" data-target="#manage-mobile-apps" data-toggle="tab">Applications</a></li>
-                <li><a id="mobile-games-tab" href="/mobile/games/" data-target="#manage-mobile-games" data-toggle="tab">Games</a></li>
-            </ul>
-        </li>
-        <li class="dropdown" data-toggle="tab">
-            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Html<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a id="tags-tab" href="/tags/" data-target="#manage-tags" data-toggle="tab">Tags</a></li>
-            </ul>
-        </li>
-        <li class="dropdown" data-toggle="tab">
-            <a class="dropdown-toggle" href="#" data-toggle="dropdown">AngularJS<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a id="hello-tab" href="/hello/" data-target="#manage-hello" data-toggle="tab">Hello</a></li>
-                <li><a id="todolist-tab" href="/todolist/" data-target="#manage-todolist" data-toggle="tab">ToDo List</a></li>
-                <li><a id="js-projects-tab" href="/javascript-projects/" data-target="#manage-js-projects" data-toggle="tab">JavaScript Projects</a></li>
-                <li class="divider"></li>
-                <!--dropdown-submenu не заработал нормально с data-toggle. После первого нажатия пункт меню остаётся активным, и повторное нажатие ни к чему не приводит.-->
-                <li class="dropdown-submenu">
-                    <a href="#">Others</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/something1/" data-target="#manage-something1" data-toggle="tab">Something 1</a></li>
-                        <li><a href="/something2/" data-target="#manage-something2" data-toggle="tab">Something 2</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    </ul>
-    <div class="tab-content">
-        <div id="manage-home" class="tab-pane fade in active">
-            <ng-include src="'/html/home.html'"></ng-include>
-        </div>
-        <div id="manage-about" class="tab-pane fade">
-            <ng-include src="'/html/about.html'"></ng-include>
-        </div>
-        <div id="manage-contact" class="tab-pane fade">
-            <ng-include src="'/html/contact.html'"></ng-include>
-        </div>
-
-        <div id="#manage-mobile-apps" class="tab-pane fade">
-            <ng-include src="'/html/mobile-apps.html'"></ng-include>
-        </div>
-        <div id="manage-mobile-games" class="tab-pane fade">
-            <ng-include src="'/html/mobile-games.html'"></ng-include>
-        </div>
-
-
-        <div id="manage-tags" class="tab-pane fade">
-            <ng-include src="'/html/tags.html'"></ng-include>
-        </div>
-        <div id="manage-hello" class="tab-pane fade">
-            <ng-include src="'/html/hello.html'"></ng-include>
-        </div>
-        <div id="manage-todolist" class="tab-pane fade">
-            <ng-include src="'/html/todolist.html'"></ng-include>
-        </div>
-        <div id="manage-js-projects" class="tab-pane fade">
-            <ng-include src="'/html/js-projects.html'"></ng-include>
-        </div>
+<header>
+    <nav>
+        <ul class="nav nav-tabs">
+            <li class="active"><a id="home-tab" href="/" data-target="#manage-home" data-toggle="tab"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;Home</a></li>
+            <li class="dropdown" data-toggle="tab">
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-mobile fa-lg"></i>&nbsp;&nbsp;Mobile<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a id="mobile-apps-tab" href="/mobile/applications/" data-target="#manage-mobile-apps" data-toggle="tab">Applications</a></li>
+                    <li><a id="mobile-games-tab" href="/mobile/games/" data-target="#manage-mobile-games" data-toggle="tab">Games</a></li>
+                </ul>
+            </li>
+            <li class="dropdown" data-toggle="tab">
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-html5 fa-lg"></i>&nbsp;&nbsp;Html<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a id="tags-tab" href="/tags/" data-target="#manage-tags" data-toggle="tab">Tags</a></li>
+                </ul>
+            </li>
+            <li class="dropdown" data-toggle="tab">
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-spinner fa-lg fa-spin"></i>&nbsp;&nbsp;AngularJS<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a id="hello-tab" href="/hello/" data-target="#manage-hello" data-toggle="tab">Hello</a></li>
+                    <li><a id="todolist-tab" href="/todolist/" data-target="#manage-todolist" data-toggle="tab">ToDo List</a></li>
+                    <li><a id="js-projects-tab" href="/javascript-projects/" data-target="#manage-js-projects" data-toggle="tab">JavaScript Projects</a></li>
+                    <li class="divider"></li>
+                    <!--dropdown-submenu не заработал нормально с data-toggle. После первого нажатия пункт меню остаётся активным, и повторное нажатие ни к чему не приводит.-->
+                    <li class="dropdown-submenu">
+                        <a href="#">Others</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/something1/" data-target="#manage-something1" data-toggle="tab">Something 1</a></li>
+                            <li><a href="/something2/" data-target="#manage-something2" data-toggle="tab">Something 2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a id="contact-tab" href="/contact/" data-target="#manage-contact" data-toggle="tab"><i class="fa fa-pencil-square-o fa-lg"></i>&nbsp;&nbsp;Contact</a></li>
+            <li><a id="about-tab" href="/about/" data-target="#manage-about" data-toggle="tab"><i class="fa fa-info fa-lg"></i>&nbsp;&nbsp;About</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="tab-content">
+    <div id="manage-home" class="tab-pane fade in active">
+        <ng-include src="'/html/home.html'"></ng-include>
     </div>
-</article>
+    <div id="manage-about" class="tab-pane fade">
+        <ng-include src="'/html/about.html'"></ng-include>
+    </div>
+    <div id="manage-contact" class="tab-pane fade">
+        <ng-include src="'/html/contact.html'"></ng-include>
+    </div>
+
+    <div id="#manage-mobile-apps" class="tab-pane fade">
+        <ng-include src="'/html/mobile-apps.html'"></ng-include>
+    </div>
+    <div id="manage-mobile-games" class="tab-pane fade">
+        <ng-include src="'/html/mobile-games.html'"></ng-include>
+    </div>
+
+    <div id="manage-tags" class="tab-pane fade">
+        <ng-include src="'/html/tags.html'"></ng-include>
+    </div>
+    <div id="manage-hello" class="tab-pane fade">
+        <ng-include src="'/html/hello.html'"></ng-include>
+    </div>
+    <div id="manage-todolist" class="tab-pane fade">
+        <ng-include src="'/html/todolist.html'"></ng-include>
+    </div>
+    <div id="manage-js-projects" class="tab-pane fade">
+        <ng-include src="'/html/js-projects.html'"></ng-include>
+    </div>
+</main>
 <footer class="footer light">
     <div class="container">
         <p class="text">&copy; 2016</p>
